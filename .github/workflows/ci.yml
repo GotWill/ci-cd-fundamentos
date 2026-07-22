@@ -4,7 +4,13 @@ on:
   pull_request:
     branches:
       - develop
-
+  paths:
+    - 'src/**'
+    - 'tests/**'
+    - '.github/workflows/**'
+    - 'package.json'
+    - 'tsconfig.json'
+    
 jobs:
   test:
     runs-on: ubuntu-latest
