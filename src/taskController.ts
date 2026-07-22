@@ -16,7 +16,7 @@ export function getTasks(_req: Request, res: Response) {
 export function getTaskById(req: Request, res: Response) {
   const task = tasks.find((t) => t.id === Number(req.params.id));
   if (!task) {
-    res.status(404).json({ error: 'Task not found' });
+    res.status(404).json({ error: 'Task not found.' });
     return;
   }
   res.json(task);
